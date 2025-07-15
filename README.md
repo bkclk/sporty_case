@@ -2,11 +2,33 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Project Design & Implementation Notes
+
+### Design
+
+I did not use any external design tool or library because this is a small project and the page does not include many parts.
+
+For styling, I chose **SASS** (Syntactically Awesome Style Sheets) as a CSS preprocessor. SASS allows for more maintainable and modular styles through features like variables, nesting, and mixins, which help keep the codebase organized and scalable even as the project grows.
+
+### Search
+
+For the search functionality, I used the `fuse.js` package to match similar names. This provides a much better user experience than exact matches.
+
+Additionally, I added a sorting feature that allows users to sort the results by name and game type, making it easier to organize and find the desired entries.
+
+### State Management
+
+I did not use any global state management solution (like Context or Redux) because it was not necessary for this project. However, for larger projects, such solutions can be considered.
+
+### Development Tools
+
+For the whole project, I used the Cursor built-in AI tool to assist with coding and implementation.
+
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -14,12 +36,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### `npm test`
+### `yarn test`
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### `yarn build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -29,7 +51,7 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### `yarn eject`
 
 **Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
@@ -65,6 +87,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

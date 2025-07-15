@@ -1,0 +1,78 @@
+@import '../../styles/variable.scss';
+
+.league-table-wrapper {
+  width: 100%;
+  margin-top: 16px;
+}
+
+.league-table.league-table-grid {
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  color: #fff;
+  border: 1px solid #bbb;
+  border-radius: 10px;
+}
+
+.league-table-header,
+.league-table-row {
+  display: grid;
+  grid-template-columns: 40% 20% 40%;
+  align-items: center;
+}
+
+.league-table-header {
+  font-weight: bold;
+  font-size: 17px;
+  background: #e41827;
+  border-radius: 10px 10px 0 0;
+}
+
+.league-table-row {
+  background: transparent;
+  color: #222;
+  border-top: 1px solid #bbb;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.league-table-row.no-match,
+.league-table-row.badge-row {
+  color: #222;
+  cursor: default;
+}
+
+.league-table-row:hover {
+  background: #e0e0e0 !important;
+}
+
+.league-table-col {
+  padding: 12px 16px;
+  border-right: 1px solid #bbb;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.league-table-col:last-child {
+  border-right: none;
+}
+
+.no-match-message {
+  grid-column: 1 / span 3;
+  text-align: center;
+  color: #000;
+  font-style: italic;
+}
+
+@media (max-width: $mobile) {
+  .league-table-header,
+  .league-table-row,
+  .league-table-grid-row {
+    font-size: 15px;
+  }
+  .league-table-col {
+    padding: 8px 8px;
+  }
+}
